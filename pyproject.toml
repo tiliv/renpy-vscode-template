@@ -22,14 +22,18 @@ filterwarnings = [
   "ignore:the imp module is deprecated in favour of importlib; see the module's documentation for alternative uses",
 ]
 pythonpath = "renpy-8.0.1-sdk renpy-8.0.1-sdk/lib/python3.9"
-addopts = "--cov"
-testpaths = "game"
-python_files = "test_*.py"
+addopts = "--cov --ignore cache --ignore renpy-*-sdk"
+testpaths = "."
+python_files = ["test_*.py", "*.test.py"]
+log_cli_level = "DEBUG"
 
 [tool.coverage.run]
-source = ["game"]
+source = ["."]
+omit = [
+  ".*",
+  "cache",
+  "renpy-*-sdk",
+]
 
 [tool.coverage.report]
-skip_covered = true
 skip_empty = true
-sort = '-cover'

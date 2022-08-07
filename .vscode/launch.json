@@ -10,13 +10,6 @@
       "request": "launch",
       "module": "pytest",
       "justMyCode": true
-    },
-    {
-      "name": "Ren'Py: Coverage",
-      "type": "python",
-      "request": "launch",
-      "module": "coverage",
-      "justMyCode": true
     }
   ]
 }

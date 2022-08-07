@@ -1,0 +1,35 @@
+[tool.poetry]
+name = "Your Ren'py Project"
+version = "0.1.0"
+description = ""
+authors = ["Credit Yourself <you@somewhere.web>"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+
+[tool.poetry.dev-dependencies]
+pytest = "^7.1.2"
+pytest-cov = "^3.0.0"
+black = "^22.6.0"
+mypy = "^0.971"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+filterwarnings = [
+  "ignore:the imp module is deprecated in favour of importlib; see the module's documentation for alternative uses",
+]
+pythonpath = "renpy-8.0.1-sdk renpy-8.0.1-sdk/lib/python3.9"
+addopts = "--cov"
+testpaths = "game"
+python_files = "test_*.py"
+
+[tool.coverage.run]
+source = ["game"]
+
+[tool.coverage.report]
+skip_covered = true
+skip_empty = true
+sort = '-cover'

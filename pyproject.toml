@@ -24,7 +24,9 @@ filterwarnings = [
 pythonpath = "renpy-8.0.1-sdk renpy-8.0.1-sdk/lib/python3.9"
 addopts = "--cov --ignore cache --ignore renpy-*-sdk"
 testpaths = "."
-python_files = ["test_*.py", "*.test.py"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
 log_cli_level = "DEBUG"
 
 [tool.coverage.run]

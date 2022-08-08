@@ -21,7 +21,7 @@ build-backend = "poetry.core.masonry.api"
 filterwarnings = [
   "ignore:the imp module is deprecated in favour of importlib; see the module's documentation for alternative uses",
 ]
-addopts = "--cov --ignore cache --ignore renpy-*-sdk"
+addopts = "--tb=native --cov --ignore cache --ignore renpy-*-sdk"
 testpaths = "."
 python_files = ["test_*.py"]
 python_classes = ["Test*"]

@@ -4,6 +4,9 @@ version = "0.1.0"
 description = ""
 authors = ["Credit Yourself <you@somewhere.web>"]
 
+[tool.poetry.scripts]
+cli = "cli:root"
+
 [tool.poetry.dependencies]
 python = "^3.9"
 
@@ -12,6 +15,8 @@ pytest = "^7.1.2"
 pytest-cov = "^3.0.0"
 black = "^22.6.0"
 mypy = "^0.971"
+click = "^8.1.3"
+pdoc = "^12.1.0"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]

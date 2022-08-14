@@ -1,3 +1,4 @@
+# Ren'py sane defaults
 .DS_Store
 errors.txt
 log.txt
@@ -5,5 +6,13 @@ traceback.txt
 *.rpyc
 *.rpymc
 cache
-.renpy-sdk
 saves
+
+# Project system
+.venv
+.pytest_cache
+.mypy_cache
+.coverage
+.renpy-sdk
+renpy-*-sdk
+__pycache__

@@ -1,0 +1,45 @@
+[tool.poetry]
+name = "Your Ren'py Project"
+version = "0.1.0"
+description = ""
+authors = ["Credit Yourself <you@somewhere.web>"]
+
+[tool.poetry.scripts]
+cli = "cli:root"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+
+[tool.poetry.dev-dependencies]
+pytest = "^7.1.2"
+pytest-cov = "^3.0.0"
+black = "^22.6.0"
+mypy = "^0.971"
+click = "^8.1.3"
+pdoc = "^12.1.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+filterwarnings = [
+  "ignore:the imp module is deprecated in favour of importlib; see the module's documentation for alternative uses",
+]
+addopts = "--tb=native --cov --ignore cache --ignore renpy-*-sdk"
+testpaths = "."
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+log_cli_level = "DEBUG"
+
+[tool.coverage.run]
+source = ["."]
+omit = [
+  ".*",
+  "cache/*",
+  "renpy-*-sdk/*",
+]
+
+[tool.coverage.report]
+skip_empty = true

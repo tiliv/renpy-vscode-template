@@ -1,0 +1,14 @@
+{
+    "files.exclude": {
+        "**/*.rpyc": true,
+        "**/*.rpa": true,
+        "**/*.rpymc": true,
+    },
+    "python.formatting.provider": "black",
+    "python.defaultInterpreterPath": "./.venv/bin/python",
+    "python.linting.mypyEnabled": true,
+    "python.analysis.extraPaths": [
+        "renpy-8.0.1-sdk/lib/python3.9",
+        "renpy-8.0.1-sdk",
+    ],
+}
